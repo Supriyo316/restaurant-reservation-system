@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supriyo's Restaurant - Fine Dining</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <%- include('partials/header') %>
+
+  <!-- HERO SECTION -->
+  <section class="heroSection" id="heroSection">
+    <div class="container">
+      <div class="banner">
+        <div class="largeBox">
+          <h1 class="title">Delicious</h1>
+        </div>
+        <div class="combined_boxes">
+          <div class="imageBox">
+            <img src="/images/hero1.png" alt="Delicious Food" />
+          </div>
+          <div class="textAndLogo">
+            <div class="textWithSvg">
+              <h1 class="title">Food</h1>
+              <h1 class="title dishes_title">Dishes</h1>
+              <img src="/images/threelines.svg" alt="three lines" />
+            </div>
+            <img class="logo" src="/images/logo.svg" alt="Supriyo's Restaurant Logo" />
+          </div>
+        </div>
+      </div>
+      <div class="banner">
+        <div class="imageBox">
+          <img src="/images/hero2.png" alt="Delicious Dishes" />
+        </div>
+        <h1 class="title dishes_title">Dishes</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="banner">
+        <div class="top">
+          <h1 class="heading">ABOUT US</h1>
+          <p>The only thing we're serious about is food.</p>
+        </div>
+        <p class="mid">
+          Welcome to Supriyo's Restaurant, where passion meets plate. We serve
+          authentic flavors crafted with the freshest ingredients. Every dish
+          tells a story of tradition, innovation, and love for food. Located in
+          the heart of Asansol, we bring you a dining experience like no other.
+        </p>
+        <a href="#menu">
+          Explore Menu
+          <span>→</span>
+        </a>
+      </div>
+      <div class="banner">
+        <img src="/images/about.png" alt="About Supriyo's Restaurant" />
+      </div>
+    </div>
+  </section>
+
+  <!-- QUALITIES SECTION -->
+  <section class="qualities" id="qualities">
+    <div class="container">
+      <div class="card">
+        <img src="/images/quality_food.svg" alt="Quality Food" />
+        <p class="title">QUALITY FOOD</p>
+        <p class="description">
+          We source only the finest ingredients to ensure every meal is exceptional
+          and memorable.
+        </p>
+      </div>
+      <div class="card">
+        <img src="/images/super_taste.svg" alt="Super Taste" />
+        <p class="title">SUPER TASTE</p>
+        <p class="description">
+          Our master chefs blend flavors perfectly to create unforgettable dining
+          experiences.
+        </p>
+      </div>
+      <div class="card">
+        <img src="/images/fast_delivery.svg" alt="Fast Delivery" />
+        <p class="title">FAST DELIVERY</p>
+        <p class="description">
+          Hot, fresh, and delivered to your doorstep in record time with our
+          express service.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU SECTION -->
+  <section class="menu" id="menu">
+    <div class="container">
+      <div class="heading_section">
+        <h1 class="heading">POPULAR DISHES</h1>
+        <p>
+          Discover our most loved dishes, carefully crafted by our expert chefs
+          to delight your taste buds.
+        </p>
+      </div>
+      <div class="dishes_container">
+        <% const dishes = [
+          {id:1, image:'/images/dinner1.jpeg', title:'ROASTED LAMB RUMP', category:'Dinner'},
+          {id:2, image:'/images/dinner2.png', title:'CITRUS CURED SALMON', category:'Dinner'},
+          {id:3, image:'/images/breakfast1.png', title:'PAN SEARED SEA BASS', category:'Breakfast'},
+          {id:4, image:'/images/dinner3.png', title:'STUFFED STRAWBERRY', category:'Dinner'},
+          {id:5, image:'/images/lunch1.png', title:'BEEF BURGER MEAL', category:'Lunch'},
+          {id:6, image:'/images/dinner4.png', title:'MUSSELS SOUP', category:'Dinner'},
+          {id:7, image:'/images/dinner5.png', title:'ITALIAN SPAGHETTI', category:'Dinner'},
+          {id:8, image:'/images/dinner6.png', title:'GRILLED FISH', category:'Dinner'}
+        ]; %>
+        <% dishes.forEach(dish => { %>
+          <div class="card">
+            <img src="<%= dish.image %>" alt="<%= dish.title %>" />
+            <h3><%= dish.title %></h3>
+            <button><%= dish.category %></button>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO ARE WE SECTION -->
+  <section class="who_are_we" id="who_are_we">
+    <div class="container">
+      <div class="text_banner">
+        <div class="card">
+          <h1 class="heading" style="font-weight: 300">14</h1>
+          <p>Restaurants</p>
+        </div>
+        <div class="card">
+          <h1 class="heading" style="font-weight: 300">20</h1>
+          <p>Chefs In Kitchen</p>
+        </div>
+      </div>
+      <div class="image_banner">
+        <img class="gradient_bg" src="/images/center.svg" alt="gradient background" />
+        <img src="/images/whoweare.png" alt="Who We Are" />
+      </div>
+      <div class="text_banner">
+        <div class="card">
+          <h1 class="heading" style="font-weight: 300">08</h1>
+          <p>Years Of Experience</p>
+        </div>
+        <div class="card">
+          <h1 class="heading" style="font-weight: 300">200</h1>
+          <p>Food Dishes</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM SECTION -->
+  <section class="team" id="team">
+    <div class="container">
+      <div class="heading_section">
+        <h1 class="heading">OUR TEAM</h1>
+        <p>
+          Meet the passionate individuals behind every great dining experience
+          at Supriyo's Restaurant.
+        </p>
+      </div>
+      <div class="team_container">
+        <% const team = [
+          {id:1, image:'/images/team_member_1.png', name:'JOHNATHAN TYLER', designation:'Founder & Head Chef'},
+          {id:2, image:'/images/team_member_2.png', name:'WADE WARREN', designation:'Sous Chef'},
+          {id:3, image:'/images/team_member_3.png', name:'JHON DOE', designation:'Fast Food Chef'},
+          {id:4, image:'/images/team_member_4.png', name:'ALEX COAL', designation:'Senior Chef'}
+        ]; %>
+        <% team.forEach(member => { %>
+          <div class="card">
+            <img src="<%= member.image %>" alt="<%= member.name %>" />
+            <h3><%= member.name %></h3>
+            <p><%= member.designation %></p>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION (NEW - Using review images) -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="heading_section">
+        <h1 class="heading">WHAT OUR CUSTOMERS SAY</h1>
+        <p>Real reviews from real food lovers</p>
+      </div>
+      <div class="testimonials_container">
+        <div class="review_card">
+          <img src="/images/review_1.png" alt="Customer Jane Cooper" />
+          <p class="review_text">"The food here is absolutely amazing! Best dining experience in Asansol. The roasted lamb is to die for!"</p>
+          <p class="stars">★★★★☆</p>
+          <p class="customer_name">Jane Cooper</p>
+        </div>
+        <div class="review_card">
+          <img src="/images/review_2.png" alt="Customer Esther Howard" />
+          <p class="review_text">"Supriyo's Restaurant never disappoints. The citrus cured salmon is my absolute favorite dish!"</p>
+          <p class="stars">★★★★★</p>
+          <p class="customer_name">Esther Howard</p>
+        </div>
+        <div class="review_card">
+          <img src="/images/review_3.png" alt="Customer Guy Hawkins" />
+          <p class="review_text">"Exceptional service and incredible food. This place has become our family's go-to restaurant."</p>
+          <p class="stars">★★★★★</p>
+          <p class="customer_name">Guy Hawkins</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVATION SECTION -->
+  <section class="reservation" id="reservation">
+    <div class="container">
+      <div class="banner">
+        <img src="/images/reservation.png" alt="Make a Reservation" />
+      </div>
+      <div class="banner">
+        <div class="reservation_form_box">
+          <h1>MAKE A RESERVATION</h1>
+          <p>For Further Questions, Please Call: +91-XXXXXXXXXX</p>
+          <form id="reservationForm">
+            <div>
+              <input type="text" id="firstName" placeholder="First Name" required />
+              <input type="text" id="lastName" placeholder="Last Name" required />
+            </div>
+            <div>
+              <input type="date" id="date" required />
+              <input type="time" id="time" required />
+            </div>
+            <div>
+              <input type="email" id="email" placeholder="Email" class="email_tag" required />
+              <input type="number" id="phone" placeholder="Phone" required />
+            </div>
+            <button type="submit">
+              RESERVE NOW <span>→</span>
+            </button>
+          </form>
+          <p id="formMessage" style="margin-top:15px; text-align:center;"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
